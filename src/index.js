@@ -6,7 +6,7 @@ module.exports = function zeros(expression) {
 	var	zeros_of_two=0;
 	var mass = expression.split('*');
 	for (var i=0; i<mass.length;i++) {
-		if (mass[i][mass[i].length-1]==mass[i][mass[i].length-2]) {
+		if (mass[i][mass[i].length-1]===mass[i][mass[i].length-2]) {
 			//go to factorial(n-2)
 			factorial_2(parseInt(mass[i]));
 		}
@@ -46,7 +46,7 @@ module.exports = function zeros(expression) {
 				k=0; // number of "except between 5 and 10, 15 and 20" in even factorial
 
 		//even factorial
-		if (mass%2==0) {
+		if (mass%2===0) {
 			p=parseInt(mass/50);
 			t=(parseInt(mass/25))-p;
 				if ((mass%10>=5)&&(mass<20)){
